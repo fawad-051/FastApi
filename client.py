@@ -4,7 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
-BASE_URL = os.getenv("SERVER_BASE_URL", "http://127.0.0.1:8999").rstrip("/")
+BASE_URL = os.getenv("SERVER_BASE_URL", "https://your-backend-url.railway.app").rstrip("/")
 TIMEOUT = float(os.getenv("CLIENT_TIMEOUT_SEC", "30"))
 
 st.set_page_config(
@@ -233,4 +233,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True,
+
 )
